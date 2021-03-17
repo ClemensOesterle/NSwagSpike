@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace API
 {
@@ -10,6 +11,7 @@ namespace API
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
+        [JsonPropertyName("Summary")]
         public string Summary { get; set; }
     }
 }
